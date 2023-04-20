@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Image : MonoBehaviour
 {
+    internal float fillAmount;
+
     // Start is called before the first frame update
     void Start()
     {
