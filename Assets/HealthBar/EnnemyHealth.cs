@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-/*public class EnnemyHealth : MonoBehaviour
+public class EnnemyHealth : MonoBehaviour
 {
     public static Action<Enemy> OnEnemyKilled;
     public static Action<Enemy> OnEnemyHit;
@@ -39,8 +40,8 @@ using UnityEngine;
     {
         GameObject newBar = Instantiate(healthBarPrefab, barPosition.position, Quaternion.identity);
         newBar.transform.SetParent(transform);
-        EnemyHealthContainer container = newBar.GetComponent<EnemyHealthContainer>();
-        healthBar = container.FillAmountImage;
+        //EnemyHealthContainer container = newBar.GetComponent<EnemyHealthContainer>();
+        //healthBar = container.FillAmountImage;
 
     }
     private void DealDamage(float damageReceived)
@@ -49,7 +50,7 @@ using UnityEngine;
         if (CurrentHealth <= 0)
         {
             CurrentHealth = 0;
-            Die();
+            //Die();
         }
         else
             OnEnemyHit?.Invoke(enemy);
@@ -57,4 +58,3 @@ using UnityEngine;
         
     }
 
-*/
