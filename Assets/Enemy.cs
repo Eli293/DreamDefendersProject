@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
 using UnityEngine.UIElements;
 
+/*
 public class Enemy : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -65,3 +66,4 @@ private void EndPointReached()
     ObjectPooler.ReturnToPool(GameObject);
 }
     
+*/

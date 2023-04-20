@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnnemyHealth : MonoBehaviour
+/*public class EnnemyHealth : MonoBehaviour
 {
     public static Action<Enemy> OnEnemyKilled;
     public static Action<Enemy> OnEnemyHit;
@@ -57,3 +57,4 @@ public class EnnemyHealth : MonoBehaviour
         
     }
 
+*/
