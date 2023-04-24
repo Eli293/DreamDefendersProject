@@ -636,7 +636,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1072705152}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.81, y: 0.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -663,7 +663,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: df972647a62c84a4d98f7023e8f6b59f, type: 2}
+  - {fileID: 10756, guid: 0000000000000000e000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6928,6 +6928,7 @@ GameObject:
   - component: {fileID: 1380590500}
   - component: {fileID: 1380590502}
   - component: {fileID: 1380590501}
+  - component: {fileID: 1380590503}
   m_Layer: 0
   m_Name: Tanks_0
   m_TagString: Untagged
@@ -7014,13 +7015,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c11c23a153d6541ab4594e1d5a8015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: Enemy
-  range: 20
-  fireRate: 1
-  bulletPrefab: {fileID: 740545393}
-  firePoint: {fileID: 914307615}
-  target: {fileID: 0}
-  fireCountdown: 3
 --- !u!61 &1380590501
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7093,6 +7087,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1380590503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380590497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d48caa42c72a24bb67daf1cdcb3e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  g: {fileID: 51813849}
 --- !u!1001 &1449351899
 PrefabInstance:
   m_ObjectHideFlags: 0
