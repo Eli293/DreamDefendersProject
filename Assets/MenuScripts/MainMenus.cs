@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenus : MonoBehaviour
 {
     [SerializeField]
-    Canvas mainMenu, optionsMenu;
+    Canvas mainMenu, optionsMenu, audioMenu, advMenu, videoMenu;
 
 
 
@@ -14,6 +14,9 @@ public class MainMenus : MonoBehaviour
     {
        mainMenu.enabled = true;
        optionsMenu.enabled = false;
+        audioMenu.enabled = false;
+        advMenu.enabled = false;
+        videoMenu.enabled = false;
     }
 
     public void optionsMenuInvoke()
