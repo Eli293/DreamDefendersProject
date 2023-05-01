@@ -4,7 +4,6 @@ public class Turret : MonoBehaviour
 {
     [SerializeField] private ConfirmationDialog confirmationDialog;
 
-
     private void OnMouseDown()
     {
         // Show the confirmation dialog
@@ -14,12 +13,9 @@ public class Turret : MonoBehaviour
         confirmationDialog.turretToDelete = this;
     }
 
-    public void ShowConfirmationDialog()
+    public void DeleteTurret()
     {
-        // Show the confirmation dialog
-        confirmationDialog.gameObject.SetActive(true);
-
-        // Pass a reference to this turret to the confirmation dialog
-        confirmationDialog.turretToDelete = this;
+        // Delete the turret object
+        Destroy(gameObject);
     }
 }

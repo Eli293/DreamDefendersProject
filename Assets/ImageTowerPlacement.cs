@@ -9,6 +9,7 @@ public class ImageTowerPlacement : MonoBehaviour
     [SerializeField] private GameObject[] towerPrefabs;
     [SerializeField] private float yOffset;
 
+    private bool towerPlaced = false; // Flag to track if a tower has been placed
     private GameObject selectedTower;
 
     private void Start()
@@ -28,8 +29,11 @@ public class ImageTowerPlacement : MonoBehaviour
 
     private void OnMouseDown()
     {
-        // Open the tower panel when the image is clicked
-        towerPanel.SetActive(true);
+        // Only open the tower panel if a tower hasn't been placed
+        if (!towerPlaced)
+        {
+            towerPanel.SetActive(true);
+        }
     }
 
     private void CloseTowerPanel()
@@ -50,13 +54,21 @@ public class ImageTowerPlacement : MonoBehaviour
 
     private void OnMouseUp()
     {
-
-        // Check if a tower has been selected and instantiate it at the position of the image
+        // Check if a tower has been selected and instantiate it at the position of the mouse cursor
         if (selectedTower != null)
         {
-            Vector3 towerPosition = transform.position + new Vector3(0f, yOffset, 0f);
+            // Get the position of the mouse cursor in world space
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            // Offset the tower position by the y-offset and snap to the grid
+            Vector3 towerPosition = new Vector3(Mathf.Round(mousePosition.x), Mathf.Round(mousePosition.y + yOffset), 0f);
+
+            // Instantiate the tower at the snapped position
             Instantiate(selectedTower, towerPosition, Quaternion.identity);
             Debug.Log("Tower instantiated at position: " + towerPosition);
+
+            // Set the flag to indicate that a tower has been placed
+            towerPlaced = true;
 
             // Adjust the tower's position to be relative to the image's position
             GameObject lastTower = GameObject.FindWithTag("Tower");
@@ -66,6 +78,4 @@ public class ImageTowerPlacement : MonoBehaviour
             }
         }
     }
-
-
 }

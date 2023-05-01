@@ -1,61 +1,52 @@
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class TowerManager : MonoBehaviour
+public class TowerMenu : MonoBehaviour
 {
-    public List<GameObject> availableTowers;
-    public GameObject currentTower;
-    public GameObject towerMenu;
+    [SerializeField] private GameObject[] towerPrefabs;
+    [SerializeField] private Button[] towerButtons;
 
-    private bool towerMenuOpen;
+    private GameObject selectedTowerPrefab;
 
-    void Start()
+    private void Start()
     {
-        towerMenu.SetActive(false);
-        towerMenuOpen = false;
+        // Add click events to the tower buttons
+        for (int i = 0; i < towerButtons.Length; i++)
+        {
+            int index = i;
+            towerButtons[i].onClick.AddListener(() => OnTowerButtonClick(index));
+        }
     }
 
-    void Update()
+    private void OnTowerButtonClick(int index)
     {
-        if (towerMenuOpen && Input.GetMouseButtonDown(0))
-        {
-            towerMenu.SetActive(false);
-            towerMenuOpen = false;
-            return;
-        }
+        // Set the selected tower based on the index of the button clicked
+        selectedTowerPrefab = towerPrefabs[index];
+    }
 
-        if (currentTower != null && Input.GetMouseButtonDown(0))
+    // Attach this method to the object where the player can place towers
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            // Check if a tower has been selected and instantiate it at the position of the mouse click
+            if (selectedTowerPrefab != null)
             {
-                if (hit.collider.tag == "Ground")
+                Vector3 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                clickPosition.z = 0f;
+
+                GameObject tower = Instantiate(selectedTowerPrefab, clickPosition, Quaternion.identity);
+
+                // Call SetPickedAndPlaced() on the LookAt component of the tower
+                LookAt lookAt = tower.GetComponentInChildren<LookAt>();
+                if (lookAt != null)
                 {
-                    Instantiate(currentTower, hit.point, Quaternion.identity);
-                    currentTower = null;
+                    lookAt.SetPickedAndPlaced();
                 }
+
+                // Reset the selectedTowerPrefab
+                selectedTowerPrefab = null;
             }
-        }
-    }
-
-    public void OpenTowerMenu()
-    {
-        if (!towerMenuOpen)
-        {
-            towerMenu.SetActive(true);
-            towerMenuOpen = true;
-        }
-    }
-
-    public void SetCurrentTower(int towerIndex)
-    {
-        if (towerIndex >= 0 && towerIndex < availableTowers.Count)
-        {
-            currentTower = availableTowers[towerIndex];
-            towerMenu.SetActive(false);
-            towerMenuOpen = false;
         }
     }
 }

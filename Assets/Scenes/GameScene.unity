@@ -158,7 +158,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82085667}
   m_LocalRotation: {x: 0.19858417, y: 0.029568328, z: -0.37560272, w: -0.90477216}
-  m_LocalPosition: {x: 4.82, y: -0.96, z: -3.59}
+  m_LocalPosition: {x: 3.82, y: -1.02, z: -3.81}
   m_LocalScale: {x: 0.75408214, y: 0.6999484, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -363,63 +363,11 @@ Transform:
   - {fileID: 508689572}
   - {fileID: 1400103533}
   - {fileID: 1173380048}
-  - {fileID: 167042000}
   - {fileID: 599753147}
+  - {fileID: 1617270945}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &167041999
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 167042000}
-  - component: {fileID: 167042001}
-  m_Layer: 0
-  m_Name: GameObject1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &167042000
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167041999}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1617270945}
-  m_Father: {fileID: 97897191}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &167042001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167041999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168ed7f202b98cd48bb2f811839408e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerPanel: {fileID: 371171729}
-  closeButton: {fileID: 1445694641}
-  towerButtons:
-  - {fileID: 1259649276}
-  towerPrefabs:
-  - {fileID: 1471369411}
-  yOffset: 0
 --- !u!1 &195000546
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,7 +910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e7110eade3d9b14695253083b078be7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretToDelete: {fileID: 1648931769}
+  turretToDelete: {fileID: 1471369417}
   confirmationPanel: {fileID: 371171729}
   deleteButton: {fileID: 2001416247}
   cancelButton: {fileID: 1898054393}
@@ -1234,6 +1182,7 @@ GameObject:
   - component: {fileID: 508689572}
   - component: {fileID: 508689571}
   - component: {fileID: 508689573}
+  - component: {fileID: 508689574}
   m_Layer: 0
   m_Name: Square (3)
   m_TagString: Untagged
@@ -1353,6 +1302,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9, y: 9}
   m_EdgeRadius: 0
+--- !u!114 &508689574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508689570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168ed7f202b98cd48bb2f811839408e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPanel: {fileID: 1107438656}
+  closeButton: {fileID: 1445694641}
+  towerButtons:
+  - {fileID: 1259649276}
+  towerPrefabs:
+  - {fileID: 1471369411}
+  yOffset: 0
 --- !u!1 &513743533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,7 +1392,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Delete
+  m_Text: Sell Tower
 --- !u!222 &513743536
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1546,7 +1514,7 @@ GameObject:
   - component: {fileID: 599753147}
   - component: {fileID: 599753151}
   - component: {fileID: 599753150}
-  - component: {fileID: 599753149}
+  - component: {fileID: 599753152}
   m_Layer: 0
   m_Name: Square (6)
   m_TagString: Untagged
@@ -1569,25 +1537,6 @@ Transform:
   m_Father: {fileID: 97897191}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 1.577, y: 0, z: 0}
---- !u!114 &599753149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 599753146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168ed7f202b98cd48bb2f811839408e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerPanel: {fileID: 1107438656}
-  closeButton: {fileID: 1445694641}
-  towerButtons:
-  - {fileID: 1259649276}
-  towerPrefabs:
-  - {fileID: 1471369411}
-  yOffset: 0
 --- !u!61 &599753150
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1685,6 +1634,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &599753152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599753146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168ed7f202b98cd48bb2f811839408e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPanel: {fileID: 1107438656}
+  closeButton: {fileID: 1445694641}
+  towerButtons:
+  - {fileID: 1259649276}
+  towerPrefabs:
+  - {fileID: 1471369411}
+  yOffset: 0
 --- !u!1 &717177273
 GameObject:
   m_ObjectHideFlags: 0
@@ -1929,7 +1897,6 @@ GameObject:
   - component: {fileID: 751388633}
   - component: {fileID: 751388632}
   - component: {fileID: 751388634}
-  - component: {fileID: 751388635}
   - component: {fileID: 751388636}
   - component: {fileID: 751388637}
   m_Layer: 0
@@ -2051,23 +2018,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9, y: 9}
   m_EdgeRadius: 0
---- !u!114 &751388635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 751388631}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168ed7f202b98cd48bb2f811839408e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerPanel: {fileID: 0}
-  closeButton: {fileID: 0}
-  towerButtons: []
-  towerPrefabs: []
-  yOffset: 0
 --- !u!114 &751388636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2094,10 +2044,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 168ed7f202b98cd48bb2f811839408e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPanel: {fileID: 0}
-  closeButton: {fileID: 0}
-  towerButtons: []
-  towerPrefabs: []
+  towerPanel: {fileID: 1107438656}
+  closeButton: {fileID: 1445694641}
+  towerButtons:
+  - {fileID: 1259649276}
+  towerPrefabs:
+  - {fileID: 0}
   yOffset: 0
 --- !u!1 &826090233
 GameObject:
@@ -2276,7 +2228,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 410124193, guid: 82f1f16d7d7cb7649a611e73b4e54110, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2646,7 +2598,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &989044321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4633,7 +4585,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091728855}
   m_LocalRotation: {x: 0.037279304, y: -0.036888883, z: -0.36237246, w: -0.93055665}
-  m_LocalPosition: {x: -10.65, y: 0.54, z: -7.27}
+  m_LocalPosition: {x: -11.09, y: 0.85, z: -7.31}
   m_LocalScale: {x: 0.75862175, y: 0.6629969, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4941,6 +4893,7 @@ GameObject:
   - component: {fileID: 1107438658}
   - component: {fileID: 1107438660}
   - component: {fileID: 1107438661}
+  - component: {fileID: 1107438662}
   m_Layer: 5
   m_Name: TowerOptionsPanel
   m_TagString: Untagged
@@ -5047,6 +5000,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 0
+--- !u!114 &1107438662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107438656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cff071228cad94aa165eb93eb0efc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefabs:
+  - {fileID: 1471369411}
+  towerButtons:
+  - {fileID: 1259649276}
 --- !u!1 &1173380046
 GameObject:
   m_ObjectHideFlags: 0
@@ -5058,6 +5027,7 @@ GameObject:
   - component: {fileID: 1173380048}
   - component: {fileID: 1173380047}
   - component: {fileID: 1173380049}
+  - component: {fileID: 1173380050}
   m_Layer: 0
   m_Name: Square (5)
   m_TagString: Untagged
@@ -5177,6 +5147,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9, y: 9}
   m_EdgeRadius: 0
+--- !u!114 &1173380050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173380046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168ed7f202b98cd48bb2f811839408e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPanel: {fileID: 1107438656}
+  closeButton: {fileID: 1445694641}
+  towerButtons:
+  - {fileID: 1259649276}
+  towerPrefabs:
+  - {fileID: 1471369411}
+  yOffset: 0
 --- !u!1 &1227351018 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1757337502914897172, guid: 481c2788bc10f7847974b70c8cc755df, type: 3}
@@ -5399,8 +5388,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1387437464}
   - {fileID: 1471369412}
+  - {fileID: 1387437464}
   m_Father: {fileID: 1107438657}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5452,19 +5441,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1259649277}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1378153498}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 0
+      m_Calls: []
 --- !u!114 &1259649277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6015,7 +5992,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 410124193, guid: 82f1f16d7d7cb7649a611e73b4e54110, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6190,7 +6167,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.000061035156, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1387437465
@@ -6246,6 +6223,7 @@ GameObject:
   - component: {fileID: 1400103533}
   - component: {fileID: 1400103532}
   - component: {fileID: 1400103534}
+  - component: {fileID: 1400103535}
   m_Layer: 0
   m_Name: Square (4)
   m_TagString: Untagged
@@ -6365,6 +6343,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9, y: 9}
   m_EdgeRadius: 0
+--- !u!114 &1400103535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400103531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168ed7f202b98cd48bb2f811839408e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPanel: {fileID: 1107438656}
+  closeButton: {fileID: 1445694641}
+  towerButtons:
+  - {fileID: 1259649276}
+  towerPrefabs:
+  - {fileID: 1471369411}
+  yOffset: 0
 --- !u!1 &1445694639
 GameObject:
   m_ObjectHideFlags: 0
@@ -6596,7 +6593,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6632,65 +6629,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471369411}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37d48caa42c72a24bb67daf1cdcb3e1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 51813849}
-  head: {fileID: 1471369411}
+  head: {fileID: 1471369412}
   rotationSpeed: 100
   angle: 0
---- !u!1 &1494370005 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7843021828414333604, guid: cd9735f0f8e3f414abfbdb5cd2853444, type: 3}
-  m_PrefabInstance: {fileID: 2050295378525065317}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &1494370008
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494370005}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.15, y: 3.75}
-    newSize: {x: 3.15, y: 3.75}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.15, y: 3.75}
-  m_EdgeRadius: 0
 --- !u!1 &1617270943
 GameObject:
   m_ObjectHideFlags: 0
@@ -6701,6 +6648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1617270945}
   - component: {fileID: 1617270944}
+  - component: {fileID: 1617270946}
   m_Layer: 0
   m_Name: Square
   m_TagString: Ground
@@ -6769,12 +6717,31 @@ Transform:
   m_GameObject: {fileID: 1617270943}
   m_LocalRotation: {x: 0.013763912, y: -0, z: -0, w: 0.9999053}
   m_LocalPosition: {x: -17.32, y: -5.34, z: 0.06}
-  m_LocalScale: {x: 0.3904758, y: 0.3237952, z: 1}
+  m_LocalScale: {x: 0.3904758, y: 0.32379523, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 167042000}
+  m_Father: {fileID: 97897191}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 1.577, y: 0, z: 0}
+--- !u!114 &1617270946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617270943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168ed7f202b98cd48bb2f811839408e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPanel: {fileID: 1107438656}
+  closeButton: {fileID: 1445694641}
+  towerButtons:
+  - {fileID: 1259649276}
+  towerPrefabs:
+  - {fileID: 1471369411}
+  yOffset: 0
 --- !u!1 &1634154748
 GameObject:
   m_ObjectHideFlags: 0
@@ -7926,9 +7893,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2050295379943997606, guid: cd9735f0f8e3f414abfbdb5cd2853444, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1471369417}
-    - targetCorrespondingSourceObject: {fileID: 7843021828414333604, guid: cd9735f0f8e3f414abfbdb5cd2853444, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1494370008}
   m_SourcePrefab: {fileID: 100100000, guid: cd9735f0f8e3f414abfbdb5cd2853444, type: 3}
 --- !u!1001 &2116402522457385536
 PrefabInstance:

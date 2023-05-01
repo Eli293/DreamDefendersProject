@@ -9,18 +9,36 @@ public class LookAt : MonoBehaviour
     public float rotationSpeed;
     public float angle;
 
+    private bool isPickedAndPlaced = false; // Flag to check if the tower is picked and placed
+
     // Update is called once per frame
     void Update()
     {
-        // Get the direction to the target relative to the head
-        Vector3 localTarget = head.transform.InverseTransformPoint(target.transform.position);
-        localTarget.z = 0f;
+        if (isPickedAndPlaced)
+        {
+            // Get the direction to the target relative to the head
+            Vector3 localTarget = head.transform.InverseTransformPoint(target.transform.position);
+            localTarget.y = 0f; // Zero out the y-component of the target direction
+            localTarget = localTarget.normalized; // Normalize the direction to get only the horizontal component
 
-        // Get the angle to the target
-        float angle = Mathf.Atan2(localTarget.y, localTarget.x) * Mathf.Rad2Deg;
+            // Get the angle to the target
+            float angle = Mathf.Atan2(localTarget.x, localTarget.z) * Mathf.Rad2Deg;
 
-        // Rotate the head to look at the target
-        Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
-        head.transform.rotation = Quaternion.RotateTowards(head.transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+            // Rotate the head to look at the target
+            Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, -angle));
+            head.transform.localRotation = Quaternion.RotateTowards(head.transform.localRotation, targetRotation, Time.deltaTime * rotationSpeed);
+        }
+    }
+
+    // Set the isPickedAndPlaced flag to true when the tower is picked and placed
+    public void SetPickedAndPlaced()
+    {
+        isPickedAndPlaced = true;
+    }
+
+    // Reset the isPickedAndPlaced flag when the tower is deselected
+    public void SetDeselected()
+    {
+        isPickedAndPlaced = false;
     }
 }
