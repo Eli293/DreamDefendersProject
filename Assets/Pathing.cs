@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,5 +43,10 @@ public class Waypoint : MonoBehaviour
 
         }
 
+    }
+
+    internal bool IsLastPoint(Vector3 position)
+    {
+        throw new NotImplementedException();
     }
 }

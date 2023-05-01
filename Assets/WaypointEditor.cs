@@ -6,6 +6,8 @@ using UnityEngine;
 [CustomEditor(typeof(Waypoint))]
 public class WaypointEditor : Editor
 {
+    internal IEnumerable<Transform> waypoints;
+
     Waypoint Waypoint => target as Waypoint;
     private void OnSceneGUI()
     {
