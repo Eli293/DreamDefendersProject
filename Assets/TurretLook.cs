@@ -61,7 +61,7 @@ public class TurretLook : MonoBehaviour
             float rotationSpeed = Mathf.Clamp(angle / fireRate, -1f, 1f);
 
             // Rotate the turret around its y-axis towards the target
-            transform.RotateAround(transform.position, Vector3.up, rotationSpeed * Time.deltaTime * 100f);
+            transform.RotateAround(transform.position, Vector3.forward, rotationSpeed * Time.deltaTime * 100f);
 
             // Fire bullet if ready
             if (fireCountdown <= 0f)
