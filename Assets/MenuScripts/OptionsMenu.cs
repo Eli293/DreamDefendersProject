@@ -40,4 +40,5 @@ public class OptionsMenu : MonoBehaviour
         advancedMenu.enabled = true;
         videoMenu.enabled = false;
     }
+    
 }
