@@ -64,18 +64,25 @@ public class ImageTowerPlacement : MonoBehaviour
             Vector3 towerPosition = new Vector3(Mathf.Round(mousePosition.x), Mathf.Round(mousePosition.y + yOffset), 0f);
 
             // Instantiate the tower at the snapped position
-            Instantiate(selectedTower, towerPosition, Quaternion.identity);
+            GameObject towerObject = Instantiate(selectedTower, towerPosition, Quaternion.identity);
             Debug.Log("Tower instantiated at position: " + towerPosition);
 
             // Set the flag to indicate that a tower has been placed
             towerPlaced = true;
 
             // Adjust the tower's position to be relative to the image's position
-            GameObject lastTower = GameObject.FindWithTag("Tower");
-            if (lastTower != null)
+            towerObject.transform.position = new Vector3(transform.position.x, transform.position.y, towerObject.transform.position.z);
+
+            // Enable any necessary components or scripts on the tower object
+           LookAt towerBehavior = towerObject.GetComponent<LookAt>();
+            if (towerBehavior != null)
             {
-                lastTower.transform.position = new Vector3(transform.position.x, transform.position.y, lastTower.transform.position.z);
+                towerBehavior.enabled = true;
             }
+
+            // Add any additional scripts or components that need to be enabled here
         }
     }
+
 }
+
