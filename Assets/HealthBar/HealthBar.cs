@@ -6,33 +6,11 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-
-    public  float health;
-    public float maxhealth;
-    public Image healthBar;
+    [SerializeField] private Image fillAmountImage;
+    public Image FillAmountImage => fillAmountImage;
 
 
-
-
-
-
-
-
-    void Start()
-    {
-        maxhealth = health;
-    }
-
-
-     void Update()
-    {
-        healthBar.fillAmount = Mathf.Clamp(health / maxhealth, 0, 1);
-    }
-    
-
-
-
-
+   
 
 
 }

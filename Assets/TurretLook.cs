@@ -78,7 +78,7 @@ public class TurretLook : MonoBehaviour
     {
         // Spawn bullet prefab at fire point
         GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Bullets bullet = bulletGO.GetComponent<Bullets>();
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
 
         // Set bullet target
         if (bullet != null)
