@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using System.Collections.Generic;
-
+using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
@@ -39,7 +39,7 @@ public class Timer : MonoBehaviour
         }
 
         int minutes = Mathf.FloorToInt(currentTime / 60f);
-        int seconds = Mathf.FloorToInt(currentTime % 100f);
+        int seconds = Mathf.FloorToInt(currentTime % 60f);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }
