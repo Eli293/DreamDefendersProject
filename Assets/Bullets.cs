@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullets : MonoBehaviour
 {
     public float speed = 10f;
-    public int damage = 10;
+    public float damage = 10;
+    public HealthBar hbar;
     public Transform target;
 
     private void Update()
@@ -22,16 +23,32 @@ public class Bullet : MonoBehaviour
         }
     }
 
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            hbar.health-= damage;
+        }
+    }
+
+
+
+    /*
+
+
     private void OnTriggerEnter(Collider other)
     {
         // Damage target if it has a health component
-        Enemy health = other.GetComponent<Enemy>();
+      HealthBar health = other.GetComponent<HealthBar>();
         if (health != null)
         {
-            health.TakeDamage(damage);
+            
         }
 
         // Destroy bullet on impact
         Destroy(gameObject);
     }
+    */
 }
