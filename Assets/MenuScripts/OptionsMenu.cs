@@ -5,7 +5,7 @@ using UnityEngine;
 public class OptionsMenu : MonoBehaviour
 {
     [SerializeField]
-    Canvas mainMenu, optionsMenu, audioMenu, advancedMenu, videoMenu;
+    Canvas mainMenu, optionsMenu, audioMenu,videoMenu;
     
 
     public void leaveOptions()
@@ -13,7 +13,6 @@ public class OptionsMenu : MonoBehaviour
         mainMenu.enabled = true;
         optionsMenu.enabled = false;
         audioMenu.enabled = false;
-        advancedMenu.enabled = false;
         videoMenu.enabled = false;
     }
     public void audioBtn()
@@ -21,7 +20,6 @@ public class OptionsMenu : MonoBehaviour
         mainMenu.enabled = false;
         optionsMenu.enabled = false;
         audioMenu.enabled = true;
-        advancedMenu.enabled = false;
         videoMenu.enabled = false;
     }
     public void videoBtn()
@@ -29,16 +27,7 @@ public class OptionsMenu : MonoBehaviour
         mainMenu.enabled = false;
         optionsMenu.enabled = false;
         audioMenu.enabled = false;
-        advancedMenu.enabled = false;
         videoMenu.enabled = true;
-    }
-    public void advancedBtn()
-    {
-        mainMenu.enabled = false;
-        optionsMenu.enabled = false;
-        audioMenu.enabled = false;
-        advancedMenu.enabled = true;
-        videoMenu.enabled = false;
     }
     
 }

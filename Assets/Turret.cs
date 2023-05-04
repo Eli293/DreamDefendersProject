@@ -6,11 +6,11 @@ public class Turret : MonoBehaviour
 
     private void OnMouseDown()
     {
+        // Add this turret to the confirmation dialog's delete list
+        confirmationDialog.AddTurretToDelete(this);
+
         // Show the confirmation dialog
         confirmationDialog.gameObject.SetActive(true);
-
-        // Pass a reference to this turret to the confirmation dialog
-        confirmationDialog.turretToDelete = this;
     }
 
     public void DeleteTurret()

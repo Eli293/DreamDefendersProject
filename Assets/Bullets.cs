@@ -8,45 +8,30 @@ public class Bullet : MonoBehaviour
     public int damage = 10;
     public Transform target;
 
-
-    public void Seek(Transform _target)
-    {
-        target = _target;
-    }
-
     private void Update()
     {
-        if (target == null)
+        // Move towards target if it exists
+        if (target != null)
         {
+            transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        }
+        else
+        {
+            // Destroy bullet if target is null
             Destroy(gameObject);
-            return;
         }
-
-        // Calculate direction to target
-        Vector3 dir = target.position - transform.position;
-
-        // Calculate distance this frame
-        float distanceThisFrame = speed * Time.deltaTime;
-
-        // Check if bullet has reached target
-        if (dir.magnitude <= distanceThisFrame)
-        {
-            HitTarget();
-            return;
-        }
-
-        // Move bullet towards target
-        transform.Translate(dir.normalized * distanceThisFrame, Space.World);
     }
 
-    private void HitTarget()
+    private void OnTriggerEnter(Collider other)
     {
-        // Damage target and destroy bullet
-        Enemy enemy = target.GetComponent<Enemy>();
-        if (enemy != null)
+        // Damage target if it has a health component
+        Enemy health = other.GetComponent<Enemy>();
+        if (health != null)
         {
-            enemy.TakeDamage(damage);
+            health.TakeDamage(damage);
         }
+
+        // Destroy bullet on impact
         Destroy(gameObject);
     }
 }

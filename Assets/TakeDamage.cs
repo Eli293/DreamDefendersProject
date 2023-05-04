@@ -25,4 +25,15 @@ public class Enemy : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Check if the collision is with a bullet
+        Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+        if (bullet != null)
+        {
+            // Take damage and remove bullet
+            TakeDamage(bullet.damage);
+            Destroy(bullet.gameObject);
+        }
+    }
 }

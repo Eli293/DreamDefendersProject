@@ -5,7 +5,7 @@ using UnityEngine;
 public class LookAt : MonoBehaviour
 {
     public GameObject target; // The enemy to aim at
-    public GameObject head; // The head of the turret
+    public GameObject turretHead; // The head of the turret
     public float rotationSpeed;
     public float angle;
 
@@ -17,7 +17,7 @@ public class LookAt : MonoBehaviour
         if (isPickedAndPlaced)
         {
             // Get the direction to the target relative to the head
-            Vector3 localTarget = head.transform.InverseTransformPoint(target.transform.position);
+            Vector3 localTarget = turretHead.transform.InverseTransformPoint(target.transform.position);
             localTarget.y = 0f; // Zero out the y-component of the target direction
             localTarget = localTarget.normalized; // Normalize the direction to get only the horizontal component
 
@@ -26,7 +26,7 @@ public class LookAt : MonoBehaviour
 
             // Rotate the head to look at the target
             Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, -angle));
-            head.transform.localRotation = Quaternion.RotateTowards(head.transform.localRotation, targetRotation, Time.deltaTime * rotationSpeed);
+            turretHead.transform.localRotation = Quaternion.RotateTowards(turretHead.transform.localRotation, targetRotation, Time.deltaTime * rotationSpeed);
         }
     }
 
