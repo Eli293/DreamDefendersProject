@@ -22,14 +22,13 @@ public class Bullet : MonoBehaviour
         }
     }
 
-
-   private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         // Damage target if it has a health component
-        TakeDamage health = other.GetComponent<TakeDamage>();
+        Enemy health = other.GetComponent<Enemy>();
         if (health != null)
         {
-            health.Takehit(damage);
+            health.TakeDamage(damage);
         }
 
         // Destroy bullet on impact
