@@ -1,18 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HeartManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public List<Image> hearts;
+
+    private int currentHearts;
+
+    private void Start()
     {
-        
+        currentHearts = hearts.Count;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Enemy"))
+        {
+            if (currentHearts > 0)
+            {
+                currentHearts--;
+                hearts[currentHearts].gameObject.SetActive(false);
+            }
+            else
+            {
+                Debug.Log("Game Over!");
+                // Add game over logic here
+            }
+        }
     }
 }
