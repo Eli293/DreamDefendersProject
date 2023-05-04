@@ -1,14 +1,14 @@
-
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class TakeDamage : MonoBehaviour
 {
     public int health = 10;
     public HealthBar healthBar;
 
-    public void TakeDamage(int damage)
+    public void Takehit(int damage)
     {
         health -= damage;
         if (health <= 0)
@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            healthBar.FillAmountImage.fillAmount = (float)health / -0.1f;
+            healthBar.FillAmountImage.fillAmount = (float)health / 10f;
         }
     }
 
@@ -25,15 +25,22 @@ public class Enemy : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    private void OnCollisionEnter(Collision collision)
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         // Check if the collision is with a bullet
         Bullet bullet = collision.gameObject.GetComponent<Bullet>();
         if (bullet != null)
         {
             // Take damage and remove bullet
-            TakeDamage(bullet.damage);
+            Takehit(10);
             Destroy(bullet.gameObject);
         }
     }
 }
+
+
+
+
+
