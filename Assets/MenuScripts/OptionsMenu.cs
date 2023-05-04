@@ -29,12 +29,5 @@ public class OptionsMenu : MonoBehaviour
         audioMenu.enabled = false;
         videoMenu.enabled = true;
     }
-    public void advancedBtn()
-    {
-        mainMenu.enabled = false;
-        optionsMenu.enabled = false;
-        audioMenu.enabled = false;
-        videoMenu.enabled = false;
-    }
     
 }
