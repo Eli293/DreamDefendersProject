@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,10 +10,16 @@ public class HealthManager : MonoBehaviour
     public Image heart3;
     public int maxHealth = 3;
     public int currentHealth;
+    public Canvas loseCanvas;
 
     void Start()
     {
         currentHealth = maxHealth;
+        loseCanvas.enabled = false;
+    }
+    private void Update()
+    {
+        UpdateHearts(maxHealth);
     }
 
     public void UpdateHearts(int health)
@@ -36,11 +44,18 @@ public class HealthManager : MonoBehaviour
             heart2.enabled = false;
             heart3.enabled = false;
         }
-        else
+        else if (currentHealth == 0)
         {
+            loseCanvas.enabled = true;
+            Time.timeScale = 0;
+        
             heart1.enabled = false;
             heart2.enabled = false;
             heart3.enabled = false;
+
+            
+            
         }
     }
+ 
 }

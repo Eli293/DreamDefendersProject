@@ -8,25 +8,40 @@ public class PauseMenu : MonoBehaviour
     bool isPaused = false;
     [SerializeField]
     GameObject PauseCanvas;
+
+    public Canvas winCanvas;
+    public Canvas loseCanvas;
     void Start()
     {
-
+        winCanvas.enabled = false;
+        loseCanvas.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
+
+            if (winCanvas.enabled || loseCanvas.enabled)
             {
-                ResumeMe();
+
             }
             else
             {
-                PauseMe();
+                if (isPaused)
+                {
+                    ResumeMe();
+                }
+                else
+                {
+                    PauseMe();
+                }
             }
         }
+        
     }
     public void PauseMe()
     {
