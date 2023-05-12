@@ -2,33 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class Health : MonoBehaviour
 {
-    public int curHealth = 0;
     public int maxHealth = 100;
+    public int currentHealth;
 
     public HealthBar healthBar;
 
-    void Start()
+    private void Start()
     {
-        curHealth = maxHealth;
-    }
+        currentHealth = maxHealth;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (healthBar != null)
         {
-            DamagePlayer(10);
+            healthBar.SetHealth(currentHealth);
         }
     }
 
     public void DamagePlayer(int damage)
     {
-        curHealth -= damage;
+        currentHealth -= damage;
 
-        healthBar.SetHealth(curHealth);
+        if (healthBar != null)
+        {
+            healthBar.SetHealth(currentHealth);
+        }
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        // Handle player death here
     }
 }
-

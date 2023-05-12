@@ -4,26 +4,46 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Bullet : MonoBehaviour
 {
-  
-    public float damageAmount = 10f;
-    internal Transform target;
+    public float speed = 20f;
+    public int damage = 10;
+    public Transform target;
 
-    FloatingHealthBar floatingHealth;
-    
-
-    private void OnTriggerEnter2D(Collider2D collider2d)
+    private void Start()
     {
-        
-        
-
-
-        if (floatingHealth != null)
+        if (target == null)
         {
-            floatingHealth.TakeDamage(damageAmount);
+            //Destroy(gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        if (target == null)
+        {
+            Destroy(gameObject);
+            return;
         }
 
-        // Destroy the bullet object after collision or add your own logic
+        Vector3 direction = target.position - transform.position;
+        float distanceThisFrame = speed * Time.deltaTime;
+
+        if (direction.magnitude <= distanceThisFrame)
+        {
+            HitTarget();
+            return;
+        }
+
+        transform.Translate(direction.normalized * distanceThisFrame, Space.World);
+    }
+
+    private void HitTarget()
+    {
+        Health health = target.GetComponent<Health>();
+        if (health != null)
+        {
+            health.DamagePlayer(damage);
+        }
+
         Destroy(gameObject);
     }
 }
-
