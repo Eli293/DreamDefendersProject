@@ -9,6 +9,7 @@ TagManager:
   - Tower
   - bullet
   - Bullet
+  - Monster
   layers:
   - Default
   - TransparentFX
