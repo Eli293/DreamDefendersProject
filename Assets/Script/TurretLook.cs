@@ -12,7 +12,6 @@ public class TurretLook : MonoBehaviour
 
     private Transform target;
     private float fireCountdown = 0f;
-    private Sprite bulletSprite;
 
     private void Start()
     {
@@ -85,13 +84,6 @@ public class TurretLook : MonoBehaviour
         if (bullet != null)
         {
             bullet.target = target;
-
-            // Set bullet sprite
-            SpriteRenderer bulletSpriteRenderer = bulletGO.GetComponent<SpriteRenderer>();
-            if (bulletSpriteRenderer != null)
-            {
-                bulletSpriteRenderer.sprite = bulletSprite;
-            }
         }
     }
 
