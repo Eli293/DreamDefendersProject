@@ -30,5 +30,18 @@ public class Health : MonoBehaviour
         curHealth -= damage;
 
         healthBar.SetHealth(curHealth);
+
+        Die();
     }
+
+
+    public void Die()
+    {
+        if (curHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
+

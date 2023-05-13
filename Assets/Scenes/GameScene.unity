@@ -3580,7 +3580,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d13869a81e5afe544a47ac40fb3fe962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deleteCanvas: {fileID: 0}
 --- !u!1 &375385183
 GameObject:
   m_ObjectHideFlags: 0
@@ -14762,7 +14761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  damage: 2
+  damage: 10
   target: {fileID: 2116402522457385537}
 --- !u!1 &1501569619
 GameObject:
@@ -20315,12 +20314,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dee07f9b20fd77b40838680a5b94b91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterPrefab: {fileID: 0}
-  spawnPosition: {fileID: 0}
-  monstersPerWave: 3
-  spawnDelay: 1
-  spawnInterval: 5
-  waypointEditor: {fileID: 0}
 --- !u!95 &2116402522457385544
 Animator:
   serializedVersion: 5
