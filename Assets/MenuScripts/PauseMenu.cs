@@ -9,7 +9,6 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     GameObject PauseCanvas;
 
-    public Canvas options;
     public Canvas winCanvas;
     public Canvas loseCanvas;
     void Start()
@@ -56,13 +55,4 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
         PauseCanvas.SetActive(false);
     }
-    public void OptionsMe()
-    {
-        Time.timeScale = 0;
-        isPaused= true;
-        options.enabled = true;
-        loseCanvas.enabled = false;
-        winCanvas.enabled= false;
-    }
-
 }
