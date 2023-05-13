@@ -8,14 +8,6 @@ public class Bullet : MonoBehaviour
     public int damage = 10;
     public Transform target;
 
-    private void Start()
-    {
-        if (target == null)
-        {
-            //Destroy(gameObject);
-        }
-    }
-
     private void Update()
     {
         if (target == null)
@@ -24,16 +16,18 @@ public class Bullet : MonoBehaviour
             return;
         }
 
-        Vector3 direction = target.position - transform.position;
-        float distanceThisFrame = speed * Time.deltaTime;
+        // Calculate the direction towards the target
+        Vector3 direction = (target.position - transform.position).normalized;
 
-        if (direction.magnitude <= distanceThisFrame)
+        // Move the bullet towards the target
+        transform.Translate(direction * speed * Time.deltaTime, Space.World);
+
+        // Check if the bullet has reached the target
+        float distanceToTarget = Vector3.Distance(transform.position, target.position);
+        if (distanceToTarget <= 0.1f) // Adjust the threshold as needed
         {
             HitTarget();
-            return;
         }
-
-        transform.Translate(direction.normalized * distanceThisFrame, Space.World);
     }
 
     private void HitTarget()
