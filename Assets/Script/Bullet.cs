@@ -6,6 +6,9 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 20f;
     public int damage = 10;
+   
+    public GameObject bulletPrefab;
+    public Transform spawnPoint;
     public Transform target;
 
     private void Start()
@@ -13,8 +16,19 @@ public class Bullet : MonoBehaviour
         if (target == null)
         {
             //Destroy(gameObject);
+            InvokeRepeating("SpawnBullet", 0f, 0.5f);
         }
     }
+
+   
+
+    void SpawnBullet()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
+        Bullet bulletComponent = bullet.GetComponent<Bullet>();
+        bulletComponent.target = target;
+    }
+
 
     private void Update()
     {

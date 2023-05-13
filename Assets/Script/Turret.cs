@@ -18,7 +18,11 @@ public class Turret : MonoBehaviour
     private void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        InvokeRepeating("Shoot", 1f, fireRate);
     }
+
+ 
+
 
     private void UpdateTarget()
     {
@@ -45,6 +49,7 @@ public class Turret : MonoBehaviour
             target = null;
         }
     }
+
 
     private void Update()
     {

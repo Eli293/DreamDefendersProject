@@ -12,8 +12,9 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public int curHealth = 20;
-    public int maxHealth = 10;
+    public int maxHealth = 50;
     public HealthBar healthBar;
+  
     void Start()
     {
         curHealth = maxHealth;

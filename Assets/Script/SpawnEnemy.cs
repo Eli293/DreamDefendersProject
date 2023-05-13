@@ -40,12 +40,12 @@ public class SpawnEnemy : MonoBehaviour
         Destroy(monster); // Destroy the monster game object
     }
 
-    private void OnDestroy()
+   /* private void OnDestroy()
     {
         // Destroy any remaining monsters when the spawner is destroyed
         foreach (GameObject monster in monsters)
         {
             Destroy(monster);
         }
-    }
+    }*/
 }
