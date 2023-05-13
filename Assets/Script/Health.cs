@@ -1,41 +1,34 @@
+using Mono.Cecil.Cil;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
+using Unity.Collections.LowLevel.Unsafe;
+using Unity.VisualScripting;
 using UnityEngine;
+
 
 public class Health : MonoBehaviour
 {
-    public int maxHealth = 100;
-    public int currentHealth;
-
+    public int curHealth = 20;
+    public int maxHealth = 10;
     public HealthBar healthBar;
-
-    private void Start()
+    void Start()
     {
-        currentHealth = maxHealth;
-
-        if (healthBar != null)
+        curHealth = maxHealth;
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            healthBar.SetHealth(currentHealth);
+            DamagePlayer(1);
         }
     }
-
     public void DamagePlayer(int damage)
     {
-        currentHealth -= damage;
+        curHealth -= damage;
 
-        if (healthBar != null)
-        {
-            healthBar.SetHealth(currentHealth);
-        }
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-    }
-
-    private void Die()
-    {
-        // Handle player death here
+        healthBar.SetHealth(curHealth);
     }
 }

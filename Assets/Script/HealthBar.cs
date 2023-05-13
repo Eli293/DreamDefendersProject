@@ -4,13 +4,24 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
+
 public class HealthBar : MonoBehaviour
 {
     public Slider healthBar;
+    public Health playerHealth;
 
-    public void SetHealth(int health)
+    private void Start()
     {
-        healthBar.value = health;
+        playerHealth = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Health>();
+        healthBar = GetComponent<Slider>();
+        healthBar.maxValue = playerHealth.maxHealth;
+        healthBar.value = playerHealth.maxHealth;
+    }
+
+    public void SetHealth(int hp)
+    {
+        healthBar.value = hp;
     }
 }
+
 

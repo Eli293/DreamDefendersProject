@@ -19927,6 +19927,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1404261081055536950, guid: 0205a9f2398c2994dba16eaa3289a8c4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2125
+      objectReference: {fileID: 0}
+    - target: {fileID: 1404261081055536950, guid: 0205a9f2398c2994dba16eaa3289a8c4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0000038147
+      objectReference: {fileID: 0}
     - target: {fileID: 1719292839478169568, guid: 0205a9f2398c2994dba16eaa3289a8c4, type: 3}
       propertyPath: healthBar
       value: 
@@ -19974,11 +19982,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7681183633583288160, guid: b8ed75f70702d9849bc312407340f0fa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.090002
+      value: -18.29
       objectReference: {fileID: 0}
     - target: {fileID: 7681183633583288160, guid: b8ed75f70702d9849bc312407340f0fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.4599988
+      value: 1.41
       objectReference: {fileID: 0}
     - target: {fileID: 7681183633583288160, guid: b8ed75f70702d9849bc312407340f0fa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20410,8 +20418,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b1b87f122f21242951ca01797a6c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curHealth: 10
   maxHealth: 10
-  currentHealth: 0
   healthBar: {fileID: 1752005714}
 --- !u!1001 &7460183559958868435
 PrefabInstance:
