@@ -1348,11 +1348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c11c23a153d6541ab4594e1d5a8015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: Enemy
-  range: 10
-  fireRate: 1
-  bulletPrefab: {fileID: 1494987298}
-  firePoint: {fileID: 82085668}
 --- !u!212 &82085673
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14591,11 +14586,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c11c23a153d6541ab4594e1d5a8015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: Enemy
-  range: 10
-  fireRate: 2
-  bulletPrefab: {fileID: 0}
-  firePoint: {fileID: 1471369412}
 --- !u!114 &1471369425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16852,11 +16842,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c11c23a153d6541ab4594e1d5a8015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: Enemy
-  range: 10
-  fireRate: 1
-  bulletPrefab: {fileID: 0}
-  firePoint: {fileID: 1846485954}
 --- !u!114 &1846485963
 MonoBehaviour:
   m_ObjectHideFlags: 0
