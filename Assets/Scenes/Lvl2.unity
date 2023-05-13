@@ -3574,7 +3574,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d13869a81e5afe544a47ac40fb3fe962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deleteCanvas: {fileID: 0}
 --- !u!1 &375385183
 GameObject:
   m_ObjectHideFlags: 0
@@ -13744,7 +13743,6 @@ MonoBehaviour:
   countdownTime: 60
   winCanvas: {fileID: 457241681}
   loseCanvas: {fileID: 1590390196}
-  nextSceneName: 
 --- !u!114 &1307772872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16331,7 +16329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1054, y: 50}
+  m_AnchoredPosition: {x: -1397, y: 63}
   m_SizeDelta: {x: 323.5, y: 42.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1752005713
@@ -16949,7 +16947,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822186646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.7, y: 3.39, z: 0}
+  m_LocalPosition: {x: -27.09, y: 3.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20225,9 +20223,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2116402524216753393, guid: 1b025e727e4282446aa826c89d02d5ed, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2116402522457385549}
-    - targetCorrespondingSourceObject: {fileID: 2116402524216753393, guid: 1b025e727e4282446aa826c89d02d5ed, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2116402522457385551}
   m_SourcePrefab: {fileID: 100100000, guid: 1b025e727e4282446aa826c89d02d5ed, type: 3}
 --- !u!4 &2116402522457385537 stripped
 Transform:
@@ -20262,12 +20257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dee07f9b20fd77b40838680a5b94b91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterPrefab: {fileID: 0}
-  spawnPosition: {fileID: 0}
-  monstersPerWave: 3
-  spawnDelay: 1
-  spawnInterval: 5
-  waypointEditor: {fileID: 0}
 --- !u!95 &2116402522457385544
 Animator:
   serializedVersion: 5
@@ -20361,21 +20350,6 @@ Rigidbody2D:
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &2116402522457385549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 51813849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64b1b87f122f21242951ca01797a6c94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curHealth: 0
-  maxHealth: 100
-  healthBar: {fileID: 0}
---- !u!114 &2116402522457385551
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

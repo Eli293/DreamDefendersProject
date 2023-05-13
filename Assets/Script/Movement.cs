@@ -26,7 +26,9 @@ public class CharacterController : MonoBehaviour
             currentWaypointIndex++;
             if (currentWaypointIndex >= waypoint.Points.Length)
             {
-                currentWaypointIndex = 0;
+                // Reached the end of waypoints, despawn the character
+                DespawnCharacter();
+                return; // Exit the Update method
             }
             currentWaypoint = waypoint.GetWaypointPosition(currentWaypointIndex);
         }
@@ -40,5 +42,13 @@ public class CharacterController : MonoBehaviour
 
         // Move towards the current waypoint using interpolation
         transform.position = Vector3.MoveTowards(transform.position, currentWaypoint, speed * Time.deltaTime);
+    }
+
+    private void DespawnCharacter()
+    {
+        // Perform any necessary cleanup or effects before despawning the character
+
+        // Destroy the character's game object
+        Destroy(gameObject);
     }
 }
