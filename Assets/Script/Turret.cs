@@ -1,6 +1,9 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+
 
 public class Turret : MonoBehaviour
 {
@@ -52,24 +55,24 @@ public class Turret : MonoBehaviour
 
         if (fireCountdown <= 0f)
         {
-            SpawnBullet();
+            Shoot();
             fireCountdown = 1f / fireRate;
         }
 
         fireCountdown -= Time.deltaTime;
     }
 
-    private void SpawnBullet()
+    private void Shoot()
     {
         if (bulletPrefab == null || firePoint == null)
         {
             return;
         }
 
-        GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
 
-        if (bullet != null)
+        if (bullet != null && target != null)
         {
             bullet.target = target.transform;
         }
@@ -81,3 +84,4 @@ public class Turret : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 }
+
