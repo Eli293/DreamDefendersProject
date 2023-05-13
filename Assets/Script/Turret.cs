@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class Turret : MonoBehaviour
 {
     public Transform target;
@@ -19,7 +20,7 @@ public class Turret : MonoBehaviour
 
     private void UpdateTarget()
     {
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Enemy");
         float shortestDistance = Mathf.Infinity;
         GameObject nearestPlayer = null;
 
