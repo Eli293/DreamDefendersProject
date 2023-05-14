@@ -19406,6 +19406,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2116402524216753393, guid: 1b025e727e4282446aa826c89d02d5ed, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2116402522457385549}
+    - targetCorrespondingSourceObject: {fileID: 2116402524216753393, guid: 1b025e727e4282446aa826c89d02d5ed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2116402522457385551}
   m_SourcePrefab: {fileID: 100100000, guid: 1b025e727e4282446aa826c89d02d5ed, type: 3}
 --- !u!4 &2116402522457385537 stripped
 Transform:
@@ -19547,6 +19550,24 @@ MonoBehaviour:
   curHealth: 10
   maxHealth: 10
   healthBar: {fileID: 1752005714}
+--- !u!114 &2116402522457385551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51813849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83d0b24a92962e74688a145c555047ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterPrefab: {fileID: 51813849}
+  spawnPosition: {fileID: 0}
+  monstersPerWave: 3
+  spawnDelay: 1
+  spawnInterval: 5
+  waypointEditor: {fileID: 0}
 --- !u!1001 &3259981041161112193
 PrefabInstance:
   m_ObjectHideFlags: 0
