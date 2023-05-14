@@ -55,4 +55,8 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
         PauseCanvas.SetActive(false);
     }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
