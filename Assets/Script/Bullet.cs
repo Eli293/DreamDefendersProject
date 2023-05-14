@@ -52,6 +52,8 @@ public class Bullet : MonoBehaviour
         }
 
         GetComponent<Collider2D>().enabled = false;
-        GetComponent<Renderer>().enabled = false;
+        // Remove the line below to keep the rendering of the bullet intact
+        // GetComponent<Renderer>().enabled = false;
     }
+
 }
