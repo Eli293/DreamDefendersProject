@@ -6568,6 +6568,10 @@ PrefabInstance:
       value: Bullet (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5421552451849970969, guid: b8ed75f70702d9849bc312407340f0fa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421552451849970969, guid: b8ed75f70702d9849bc312407340f0fa, type: 3}
       propertyPath: m_TagString
       value: Bullet
       objectReference: {fileID: 0}
@@ -10079,6 +10083,10 @@ PrefabInstance:
       value: Bullet (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5421552451849970969, guid: b8ed75f70702d9849bc312407340f0fa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421552451849970969, guid: b8ed75f70702d9849bc312407340f0fa, type: 3}
       propertyPath: m_TagString
       value: Bullet
       objectReference: {fileID: 0}
@@ -13360,7 +13368,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1413928380
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17651,7 +17659,7 @@ SpriteRenderer:
   m_Size: {x: 6.88, y: 10.72}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1936999524
@@ -17681,8 +17689,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dbb6193f143804438d8e3e9c189ad06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerSecond: 10
-  range: 10
+  damagePerSecond: 100
+  range: 100
   fireRate: 1
   lineRenderer: {fileID: 1936999526}
   lineMaterial: {fileID: 2100000, guid: 0bcbc06d5bfa27948bab8601b0ad5fb7, type: 2}
