@@ -641,6 +641,9 @@ namespace Unity.VisualScripting.Generated.Aot
 	// ClickableTower.op_Implicit
 	// ClickableTower.op_Equality
 	// ClickableTower.op_Inequality
+	// CharacterCollision.op_Implicit
+	// CharacterCollision.op_Equality
+	// CharacterCollision.op_Inequality
 	// ConfirmationDialog.op_Implicit
 	// ConfirmationDialog.op_Equality
 	// ConfirmationDialog.op_Inequality
@@ -668,6 +671,9 @@ namespace Unity.VisualScripting.Generated.Aot
 	// HealthBar.op_Implicit
 	// HealthBar.op_Equality
 	// HealthBar.op_Inequality
+	// HeartsController.op_Implicit
+	// HeartsController.op_Equality
+	// HeartsController.op_Inequality
 	// ImageTowerPlacement.op_Implicit
 	// ImageTowerPlacement.op_Equality
 	// ImageTowerPlacement.op_Inequality
@@ -8241,6 +8247,41 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
+		// CharacterCollision.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CharacterCollision_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// CharacterCollision.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CharacterCollision_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// CharacterCollision.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CharacterCollision_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
 		// ConfirmationDialog.op_Implicit
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void ConfirmationDialog_op_Implicit()
@@ -8547,6 +8588,41 @@ namespace Unity.VisualScripting.Generated.Aot
 		// HealthBar.op_Inequality
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void HealthBar_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// HeartsController.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void HeartsController_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// HeartsController.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void HeartsController_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// HeartsController.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void HeartsController_op_Inequality()
 		{
 			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
 			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
