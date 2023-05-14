@@ -3810,7 +3810,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d13869a81e5afe544a47ac40fb3fe962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deleteCanvas: {fileID: 0}
 --- !u!1 &375385183
 GameObject:
   m_ObjectHideFlags: 0
@@ -15067,7 +15066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b08482345c80184db22e310eb8b72c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 10
   damage: 1
   bulletPrefab: {fileID: 1494987298}
   spawnPoint: {fileID: 82085668}
@@ -20837,8 +20836,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b1b87f122f21242951ca01797a6c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curHealth: 30
-  maxHealth: 30
+  curHealth: 100
+  maxHealth: 100
   healthBar: {fileID: 1752005714}
 --- !u!114 &2116402522457385551
 MonoBehaviour:
