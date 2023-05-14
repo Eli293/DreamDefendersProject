@@ -6,9 +6,17 @@ public class LaserTower : MonoBehaviour
     public float range = 5f;
     public float fireRate = 1f;
     public LineRenderer lineRenderer;
+    public Material lineMaterial; // Assign a material with desired color and transparency
 
     private Transform target;
     private float fireCountdown = 0f;
+    private HealthBar healthBar;
+
+    private void Start()
+    {
+        lineRenderer.material = lineMaterial;
+        healthBar = FindObjectOfType<HealthBar>();
+    }
 
     private void Update()
     {
@@ -63,8 +71,11 @@ public class LaserTower : MonoBehaviour
 
     private void DamageEnemy(Transform enemy, float damage)
     {
-        // Apply damage to the enemy here
-        // You can use the enemy's script or components to handle health/damage
-        // Example: enemy.GetComponent<EnemyHealth>().TakeDamage(damage);
+        Health enemyHealth = enemy.GetComponent<Health>();
+        if (enemyHealth != null)
+        {
+            enemyHealth.DamagePlayer((int)damage);
+            healthBar.SetHealth(enemyHealth.curHealth);
+        }
     }
 }
