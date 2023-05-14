@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
     public float speed = 20f;
     public int damage = 10;
-   
     public GameObject bulletPrefab;
     public Transform spawnPoint;
     public Transform target;
@@ -15,12 +12,9 @@ public class Bullet : MonoBehaviour
     {
         if (target == null)
         {
-            //Destroy(gameObject);
             InvokeRepeating("SpawnBullet", 0f, 0.5f);
         }
     }
-
-   
 
     void SpawnBullet()
     {
@@ -28,7 +22,6 @@ public class Bullet : MonoBehaviour
         Bullet bulletComponent = bullet.GetComponent<Bullet>();
         bulletComponent.target = target;
     }
-
 
     private void Update()
     {
@@ -58,6 +51,7 @@ public class Bullet : MonoBehaviour
             health.DamagePlayer(damage);
         }
 
-        Destroy(gameObject);
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<Renderer>().enabled = false;
     }
 }

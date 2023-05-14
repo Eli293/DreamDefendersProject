@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
-
     public GameObject monsterPrefab; // The prefab of the monster to be spawned
     public Transform spawnPosition; // The position where the monsters will spawn
     public int monstersPerWave = 3; // The number of monsters to spawn at once
@@ -33,19 +32,9 @@ public class SpawnEnemy : MonoBehaviour
             }
         }
     }
-
     public void RemoveMonster(GameObject monster)
     {
-        monsters.Remove(monster); // Remove the monster from the list of spawned monsters
+        monsters[monsters.IndexOf(monster)] = null; // Set the monster to null in the list
         Destroy(monster); // Destroy the monster game object
     }
-
-   /* private void OnDestroy()
-    {
-        // Destroy any remaining monsters when the spawner is destroyed
-        foreach (GameObject monster in monsters)
-        {
-            Destroy(monster);
-        }
-    }*/
 }

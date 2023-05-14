@@ -13776,7 +13776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 547156597}
-  countdownTime: 5
+  countdownTime: 50
   winCanvas: {fileID: 457241681}
   loseCanvas: {fileID: 1590390196}
 --- !u!114 &1307772872
