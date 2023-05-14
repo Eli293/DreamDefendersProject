@@ -1557,6 +1557,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   damage: 10
+  bulletPrefab: {fileID: 0}
+  spawnPoint: {fileID: 0}
   target: {fileID: 0}
 --- !u!1 &255162296
 GameObject:
@@ -2738,6 +2740,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   damage: 2
+  bulletPrefab: {fileID: 0}
+  spawnPoint: {fileID: 0}
   target: {fileID: 2116402522457385537}
 --- !u!1 &362326786
 GameObject:
@@ -4891,11 +4895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c11c23a153d6541ab4594e1d5a8015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: Enemy
-  range: 10
-  fireRate: 1
-  bulletPrefab: {fileID: 1494987298}
-  firePoint: {fileID: 960620916}
 --- !u!61 &657932096
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13229,6 +13228,7 @@ GameObject:
   - component: {fileID: 1413928381}
   - component: {fileID: 1413928380}
   - component: {fileID: 1413928382}
+  - component: {fileID: 1413928383}
   m_Layer: 0
   m_Name: TestdDrag
   m_TagString: Untagged
@@ -13315,7 +13315,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c11c23a153d6541ab4594e1d5a8015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: Enemy
+--- !u!114 &1413928383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413928379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79451e485f0598c48bafaaf9aae81fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 2116402522457385537}
   range: 10
   fireRate: 1
   bulletPrefab: {fileID: 1494987298}
@@ -14033,11 +14045,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c11c23a153d6541ab4594e1d5a8015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: Enemy
-  range: 10
-  fireRate: 2
-  bulletPrefab: {fileID: 0}
-  firePoint: {fileID: 1471369412}
 --- !u!114 &1471369425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14204,6 +14211,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   damage: 2
+  bulletPrefab: {fileID: 0}
+  spawnPoint: {fileID: 0}
   target: {fileID: 2116402522457385537}
 --- !u!1 &1501569619
 GameObject:
@@ -15766,6 +15775,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   damage: 2
+  bulletPrefab: {fileID: 0}
+  spawnPoint: {fileID: 0}
   target: {fileID: 2116402522457385537}
 --- !u!114 &1752005713 stripped
 MonoBehaviour:
@@ -16581,11 +16592,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c11c23a153d6541ab4594e1d5a8015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: Enemy
-  range: 10
-  fireRate: 1
-  bulletPrefab: {fileID: 0}
-  firePoint: {fileID: 1846485954}
 --- !u!114 &1846485963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19434,12 +19440,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dee07f9b20fd77b40838680a5b94b91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterPrefab: {fileID: 0}
-  spawnPosition: {fileID: 0}
-  monstersPerWave: 3
-  spawnDelay: 1
-  spawnInterval: 5
-  waypointEditor: {fileID: 0}
 --- !u!95 &2116402522457385544
 Animator:
   serializedVersion: 5
