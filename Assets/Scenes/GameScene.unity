@@ -3723,6 +3723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d13869a81e5afe544a47ac40fb3fe962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deleteCanvas: {fileID: 0}
 --- !u!1 &375385183
 GameObject:
   m_ObjectHideFlags: 0
@@ -4139,7 +4140,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "This is a Tank \nIt Does X Dmg\nIt costs X$"
+  m_Text: "This is a Tank \nIt Does X Dmg\nIt costs 7 IMP"
 --- !u!222 &427428704
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5329,7 +5330,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "This is a Tank \nIt Does X Dmg\nIt costs X$"
+  m_Text: "This is a Tank \nIt Does X Dmg\nIt costs 10 IMP"
 --- !u!222 &605379171
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6827,7 +6828,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Select This
+  m_Text: 10 IMP
 --- !u!222 &816273118
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14222,7 +14223,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Select This
+  m_Text: 7 IMP
 --- !u!222 &1387437466
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18591,7 +18592,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2055715322}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1307772869}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: ResumeMe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2055715322
 MonoBehaviour:
   m_ObjectHideFlags: 0
