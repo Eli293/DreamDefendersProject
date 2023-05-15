@@ -7,14 +7,15 @@ public class HealthController : MonoBehaviour
 {
 
     public int playerHealth;
-    [SerializeField] private Image[] hearts;
+    [SerializeField] 
+    private Image[] hearts;
 
 
 
     // Start is called before the first frame update
    private void Start()
     {
-        
+        UpdateHealth();
 
     }
 
@@ -22,18 +23,24 @@ public class HealthController : MonoBehaviour
 
     public void UpdateHealth()
     {
-        for(int i=0; i<hearts.Length; i++)
+        if (playerHealth <= 0) 
         {
-            if (i < playerHealth)
-            {
-                hearts[i].color = Color.red;
-            }
 
-            else
-            {
-                hearts[i].color = Color.black;
-            }
         }
+        
+            for (int i = 0; i < hearts.Length; i++)
+            {
+                if (i < playerHealth)
+                {
+                    hearts[i].color = Color.red;
+                }
+
+                else
+                {
+                    hearts[i].color = Color.black;
+                }
+            }
+        
     }
 
     // Update is called once per frame
