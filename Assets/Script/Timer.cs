@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System;
 
 public class Timer : MonoBehaviour
 {
@@ -9,8 +10,8 @@ public class Timer : MonoBehaviour
     public float countdownTime = 60f;
     public Canvas winCanvas;
     public Canvas loseCanvas;
-
-    private float currentTime;
+    [NonSerialized]
+    public float currentTime;
 
     void Start()
     {
@@ -28,8 +29,11 @@ public class Timer : MonoBehaviour
         {
             if (loseCanvas.enabled)
             {
-                // Handle lose condition
-            }
+                /*currentTime = 0;
+                loseCanvas.enabled = true;
+                Time.timeScale = 0f;
+                */
+          }
             else
             {
                 currentTime = 0;

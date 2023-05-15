@@ -20,7 +20,7 @@ public class PlayerDamageController : MonoBehaviour
     {
         healthController.playerHealth = healthController.playerHealth - playerDamage;
         healthController.UpdateHealth();
-        gameObject.SetActive(false);
+      
     }
     void Start()
     {

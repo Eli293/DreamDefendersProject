@@ -1,10 +1,13 @@
 
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
 
 public class Health : MonoBehaviour
 {
+    [NonSerialized]
+    public IMPScript iMPScript;
     public int curHealth = 20;
     public int maxHealth = 50;
     public HealthBar healthBar;
@@ -32,6 +35,7 @@ public class Health : MonoBehaviour
         if (curHealth <= 0)
         {
             Destroy(gameObject);
+            iMPScript.Gain(3);
         }
     }
 

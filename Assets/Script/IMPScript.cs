@@ -32,10 +32,14 @@ public class IMPScript : MonoBehaviour
             return false;
         }
     }
+    public void useTest(int val) {
+        Debug.Log(Use(val));
+    }
+
     bool EnoughIMP(int val)
     {
         //check if the val is enough
-        if(val >= currency)
+        if(val <= currency)
         {
             return true;
         }
